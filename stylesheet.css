@@ -15,22 +15,23 @@ body
     background-position: top left;
 }
 
-#entete,
-#menu,
-#bloc,
-#pied
+/* Compatible DIV + HTML5 */
+#entete, header,
+#menu, nav,
+#bloc, article,
+#pied, footer
 {
     width: 760px;
     margin-left: 20px;
 }
 
-#entete
+#entete, header
 {
     height: 72px;
     padding-top: 8px;
 }
 
-#menu
+#menu, nav
 {
     float: left;
     width: 100px;
@@ -38,7 +39,7 @@ body
     margin-top: 8px;
 }
 
-#bloc
+#bloc, article
 {
     margin-left: 130px;
     margin-top: 8px;
@@ -47,7 +48,7 @@ body
     border-left: 2px solid #8a8a8a;
 }
 
-#pied
+#pied, footer
 {
     clear: both;
     height: 24px;
@@ -71,54 +72,27 @@ hr
 h1
 {
     margin: 0;
-    padding: 0;
     font-size: 22px;
-    font-weight: bold;
     color: #9f9f9f;
 }
 
 h2
 {
-    margin-top: 0;
     margin-bottom: 8px;
     font-size: 16px;
-    font-weight: bold;
     color: #ffffff;
 }
 
 h3
 {
     margin: 0;
-    padding: 0;
     font-size: 14px;
-    font-weight: bold;
     color: #9f9f9f;
-}
-
-#entete h3
-{
-    font-size: 10px;
-    color: #9f9f9f;
-    text-transform: uppercase;
 }
 
 p
 {
-    margin-top: 0;
     margin-bottom: 8px;
-}
-
-ul,
-ol
-{
-    margin-top: 4px;
-    margin-bottom: 8px;
-    padding-left: 18px;
-}
-
-li
-{
-    margin-bottom: 2px;
 }
 
 a
@@ -137,90 +111,65 @@ a:hover
 /*                    EN-TETE                        */
 /****************************************************/
 
-#entete img
+#entete img,
+header img
 {
     float: left;
     margin-right: 12px;
     border: 0;
 }
 
-#entete h1,
-#entete h3
-{
-    padding-left: 0;
-}
-
 /****************************************************/
-/*                  MENU ONGLETS                     */
+/*              MENU FENETRES (FIX GLOBAL)           */
 /****************************************************/
 
-#menu ul
+#menu ul,
+nav ul
 {
     margin: 0;
     padding: 0;
-    list-style-type: none;
+    list-style: none;
 }
 
-#menu li
+#menu li,
+nav li
 {
-    list-style-type: none;
-    width: 78px;
-    margin-bottom: 4px;
-    padding: 0;
+    width: 90px;
+    margin-bottom: 5px;
     background-color: #5a5a5a;
+
+    /* effet fenêtre */
     border-top: 1px solid #9a9a9a;
     border-left: 1px solid #9a9a9a;
     border-right: 1px solid #2f2f2f;
     border-bottom: 1px solid #2f2f2f;
 }
 
-#menu a
+#menu a,
+nav a
 {
     display: block;
-    padding: 4px 6px;
+    padding: 5px;
     color: #ffffff;
     text-decoration: none;
-    font-size: 12px;
     font-weight: bold;
 }
 
-#menu a:hover
+#menu a:hover,
+nav a:hover
 {
-    color: #ffffff;
+    background-color: #6a6a6a;
     text-decoration: underline;
-    background-color: #666666;
 }
 
 /****************************************************/
 /*                 BLOC PRINCIPAL                    */
 /****************************************************/
 
-#bloc p,
-#bloc ol,
-#bloc ul,
-#bloc table,
-#bloc form,
-#bloc object,
-#bloc video
-{
-    max-width: 600px;
-}
-
-#bloc img
+#bloc img,
+article img
 {
     border: 0;
-}
-
-.note
-{
-    font-size: 11px;
-    color: #d0d0d0;
-}
-
-.retour
-{
-    margin-top: 8px;
-    margin-bottom: 14px;
 }
 
 /****************************************************/
@@ -232,129 +181,61 @@ table
     border-collapse: collapse;
     margin-top: 6px;
     margin-bottom: 12px;
-    color: #ffffff;
 }
 
 th
 {
     padding: 4px;
-    font-size: 12px;
-    text-align: left;
-    vertical-align: top;
     background-color: #666666;
     border: 1px solid #aaaaaa;
-    color: #ffffff;
 }
 
 td
 {
     padding: 4px;
-    font-size: 12px;
-    vertical-align: top;
     border: 1px solid #aaaaaa;
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.03);
-}
-
-table img
-{
-    display: block;
-    border: 0;
+    background-color: rgba(255,255,255,0.03);
 }
 
 /****************************************************/
 /*                   FORMULAIRES                     */
 /****************************************************/
 
-form
-{
-    margin: 0;
-    padding: 0;
-}
-
-label
-{
-    color: #ffffff;
-}
-
 input,
-textarea,
-select
+textarea
 {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    color: #000000;
     background-color: #f2f2f2;
     border: 1px solid #8a8a8a;
 }
 
-input[type="text"],
-input[type="email"],
-select
+input[type="submit"]
 {
-    height: 18px;
-}
-
-textarea
-{
-    width: 220px;
-    height: 55px;
-}
-
-input[type="radio"],
-input[type="checkbox"]
-{
-    width: auto;
-    height: auto;
-    border: 0;
-    background-color: transparent;
-}
-
-input[type="submit"],
-input[type="reset"]
-{
-    height: 22px;
     background-color: #d9d9d9;
-    border: 1px solid #666666;
-    color: #000000;
+    border: 1px solid #666;
     cursor: pointer;
-}
-
-/****************************************************/
-/*                MULTIMEDIA / SERVICES              */
-/****************************************************/
-
-object
-{
-    border: 1px solid #8a8a8a;
-    background-color: rgba(255, 255, 255, 0.03);
-}
-
-video
-{
-    border: 1px solid #8a8a8a;
-    background-color: #000000;
 }
 
 /****************************************************/
 /*                      PIED                         */
 /****************************************************/
 
-#pied p
+#pied p,
+footer p
 {
-    margin: 0;
-    padding: 0;
     font-size: 10px;
     color: #9f9f9f;
 }
 
-#pied a
+#pied a,
+footer a
 {
     color: #ffffff;
     text-decoration: none;
 }
 
-#pied a:hover
+#pied a:hover,
+footer a:hover
 {
     text-decoration: underline;
 }
